@@ -1,0 +1,1 @@
+alert("hom nay troi co kha nang mua")
