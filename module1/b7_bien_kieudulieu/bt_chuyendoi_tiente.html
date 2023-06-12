@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        Số tiền:
+        <input type="text" id="money" value=""><br>
+        Loại tiền:
+        <select id="chuyen_doi">
+            <option value="vnd">VND</option>
+            <option value="usd">USD</option>
+        </select>
+        quoc gia
+        <select id="quoc_gia">
+<option value="quoc_gia">My</option>
+<option value="quoc_gai">VietNam</option>
+        </select>
+        <button type="button" id="tinh" onclick="khoi_xu_ly()">tinh toan</button><br>
+    </form>
+    <script>
+        function khoi_xu_ly() {
+            let money = document.getElementById('money').value
+            let chuyen_doi = document.getElementById('chuyen_doi').value
+            // alert(money)
+            // alert(chuyen_doi)
+            let kq = 0
+            if (chuyen_doi == 'usd') 
+            { 
+                kq = money/23500 
+            } else {
+                kq = money * 23500
+            }
+            alert(kq)
+            
+
+        }
+    </script>
+</body>
