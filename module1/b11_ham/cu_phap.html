@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <p onclick="welcom()">click vao day</p>
+    <script>
+        function welcom(){
+            alert("xin chao")
+        }
+
+        function sum(a,b){
+            return a + b;
+
+        }
+        var tong = sum(2,3)
+        document.write("tong la " + tong)
+
+</script> -->
+
+<!-- tinh binh phuong  -->
+        binh phuong cua <input type="text" id="input" oninput="maytinh()">
+        <!-- <input id="kq"> -->
+      la  <span id="kq"></span>
+        <script>
+            function binhphuong(so){
+var kq = so * so
+return kq;
+            }
+            function maytinh(){
+                var input = document.getElementById("input").value
+                var kq = binhphuong(input)
+                document.getElementById("kq").innerHTML=kq
+        
+            }
+        </script>
+</body>
+</html>

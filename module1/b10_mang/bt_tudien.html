@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 align="center">Tu dien Anh - Viet</h1>
+    <form action="">
+        <input type="text" id="tu" value="" placeholder="hay nhap tu"><br><br>
+        <select id="tu_dien">
+            <option value="tv">tieng viet</option>
+            <option value="ta">tieng anh</option>
+        </select>
+        <button type="button" onclick="kxl()" id="tieng">dich</button>
+    </form>
+    <script>
+        function kxl() {
+            var tieng_anh = ["hello", "goodbye", "green", "red"];
+            var tieng_viet = ["xin chao", "tam biet", "mau xanh", "mau do"];
+            var tieng = document.getElementById('tu_dien').value
+            var tu = document.getElementById('tu').value
+
+            console.log();
+            var index
+            if (tieng == 'tv') {
+                index = tieng_anh.indexOf(tu);
+                if (index != -1) {
+                    alert(tieng_viet[index])
+                }
+                else {
+                    alert("Không tìm thấy từ này trong từ điển.");
+                }
+            }
+            else {
+                index = tieng_viet.indexOf(tu);
+                if (index != -1) {
+                    alert(tieng_anh[index]);
+                }
+                else {
+                    alert("Không tìm thấy từ này trong từ điển.");
+                }
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

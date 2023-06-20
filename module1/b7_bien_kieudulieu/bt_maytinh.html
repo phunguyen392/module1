@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <h1 align="center" style="color:red">Caculator</h1>
     <form align="center">
        <input type="number" id="soA" value="" style="width:193px"><br>
@@ -16,6 +17,16 @@
         <button type="button" onclick="xu_ly_tru()" style="width:100px">tru</button><br>
         <button type="button" onclick="xu_ly_nhan()" style="width:100px">nhan</button><br>
         <button type="button" onclick="xu_ly_chia()" style="width:100px">chia</button><br>
+=======
+    <h1>Caculator</h1>
+    <form>
+        <input type="number" id="soA" value="">
+        <input type="number" id="soB" value="">
+        <button type="button" onclick="xu_ly_cong()">cong</button>
+        <button type="button" onclick="xu_ly_tru()">tru</button>
+        <button type="button" onclick="xu_ly_nhan()">nhan</button>
+        <button type="button" onclick="xu_ly_chia()">chia</button>
+>>>>>>> 17500f4e9a8f16ab006568d461136d598a1e22ba
     </form>
     <p id="demo"></p>
 </body>
@@ -35,8 +46,13 @@
         let soB = document.getElementById('soB').value;
         soA = parseInt(soA)
         soB = parseInt(soB)
+<<<<<<< HEAD
         let soC = soA - soB ;
         document.getElementById('demo').innerHTML = '<h1> ket qua la: </h1>' + soC
+=======
+        let soC = soA - soB ;//5
+        document.getElementById('demo').innerHTML = 'ket qua la: ' + soC
+>>>>>>> 17500f4e9a8f16ab006568d461136d598a1e22ba
 
     }
     function xu_ly_nhan(){
@@ -46,6 +62,7 @@
         soB = parseInt(soB)
         let soC = soA * soB;
         document.getElementById('demo').innerHTML = 'ket qua la: ' + soC
+<<<<<<< HEAD
     }
 
     function xu_ly_chia(){
@@ -67,6 +84,19 @@
     //     }
     // }
 
+=======
+        // document.write('ket qua la: ' + soC)
+    }
+
+    function xu_ly_chia(){
+        let soA = document.getElementById('soA').value;
+        let soB = document.getElementById('soB').value;
+        soA = parseInt(soA)
+        soB = parseInt(soB)
+        let soC = soA/soB ; //5
+        document.getElementById('demo').innerHTML = 'ket qua la: '+ soC
+    }
+>>>>>>> 17500f4e9a8f16ab006568d461136d598a1e22ba
 
 </script>
 
