@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        var i = 1;
+        var n = prompt('nhap so vao day') ;
+        var gt = 1
+        for(i=1; i<= n ; i++){
+            gt *= i 
+        }
+        document.write("giai thừa của " + n + " = " + gt + "<br>" + "&nbsp; xin cảm ơn -_- ")
+    </script> -->
+
+<!-- <script>
+    var a= 50000000
+    var n = prompt('so thang')
+    var c
+    var b
+    
+    for(b = 1; b <= n;  b++){
+        var c = (a*0.006)*b
+    }
+    document.write("lai suat trong " + n + " thang la " + c + " vnd")
+
+</script> -->
+
+<script>
+function tinh_tong(t){
+        var tong = 0
+        var i = 0
+        while(i <= t){
+            if(i % 2 == 0 ){
+            // console.log(i);        
+          var t =  tong += i
+            }
+            i++
+        }
+// document.write(tong)
+}
+var i = parseInt(prompt("Nhập số cần kiểm tra"));
+document.write("Tổng số chẵn từ 1 tới " + t + " là: " + tinh_tong(t));
+
+</script>
+
+</body>
+</html> 

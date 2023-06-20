@@ -13,10 +13,10 @@
         <input type="number" id="soA" value="">
         <input type="number" id="soB" value="">
         <button type="button" onclick="xu_ly_cong()">cong</button>
-        <!-- <button type="button" onclick="xu_ly_tru()">tru</button>
+        <button type="button" onclick="xu_ly_tru()">tru</button>
         <button type="button" onclick="xu_ly_nhan()">nhan</button>
         <button type="button" onclick="xu_ly_chia()">chia</button>
-    </form> -->
+    </form>
     <p id="demo"></p>
 </body>
 
@@ -30,32 +30,33 @@
         document.getElementById('demo').innerHTML = 'ket qua la: ' + soC 
     }
 
-    // function xu_ly_tru(){
-    //     let soA = document.getElementById('soA').value;
-    //     let soB = document.getElementById('soB').value;
-    //     soA = parseInt(soA)
-    //     soB = parseInt(soB)
-    //     let soC = soA - soB ;//5
-    //     document.getElementById('demo').innerHTML = 'ket qua la: ' + soC
+    function xu_ly_tru(){
+        let soA = document.getElementById('soA').value;
+        let soB = document.getElementById('soB').value;
+        soA = parseInt(soA)
+        soB = parseInt(soB)
+        let soC = soA - soB ;//5
+        document.getElementById('demo').innerHTML = 'ket qua la: ' + soC
 
-    // }
-    // function xu_ly_nhan(){
-    //     let soA = document.getElementById('soA').value;
-    //     let soB = document.getElementById('soB').value;
-    //     soA = parseInt(soA)
-    //     soB = parseInt(soB)
-    //     let soC = soA * soB;//5
-    //     document.getElementById('demo').innerHTML = 'ket qua la: ' + soC
-    // }
+    }
+    function xu_ly_nhan(){
+        let soA = document.getElementById('soA').value;
+        let soB = document.getElementById('soB').value;
+        soA = parseInt(soA)
+        soB = parseInt(soB)
+        let soC = soA * soB;
+        document.getElementById('demo').innerHTML = 'ket qua la: ' + soC
+        // document.write('ket qua la: ' + soC)
+    }
 
-    // function xu_ly_chia(){
-    //     let soA = document.getElementById('soA').value;
-    //     let soB = document.getElementById('soB').value;
-    //     soA = parseInt(soA)
-    //     soB = parseInt(soB)
-    //     let soC = soA/soB ; //5
-    //     document.getElementById('demo').innerHTML = 'ket qua la: '+ soC
-    // }
+    function xu_ly_chia(){
+        let soA = document.getElementById('soA').value;
+        let soB = document.getElementById('soB').value;
+        soA = parseInt(soA)
+        soB = parseInt(soB)
+        let soC = soA/soB ; //5
+        document.getElementById('demo').innerHTML = 'ket qua la: '+ soC
+    }
 
 </script>
 

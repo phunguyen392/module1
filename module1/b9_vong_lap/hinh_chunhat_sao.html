@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        for (i = 1; i <= 6; i++) {
+            for (j = 1; j <= 21; j++) {
+                if (i == 1 || i == 6 || j == 1 || j == 21) {
+                    document.write("*")
+                }
+                else {
+                    document.write("&nbsp;&nbsp;")
+                }
+            }
+            document.write("<br>");
+        }
+    </script> -->
+
+    <!-- <script>
+        for(h=1; h<=16; h++){
+            for(c=1; c<=46; c++){
+                if(c != 1){
+                document.write("*")}
+                else{
+                document.write("&nbsp;&nbsp;&nbsp")}
+            }
+            document.write("<br>")
+        }
+    </script> -->
+
+    <script>
+        
+        const canvas = document.getElementById('myCanvas');
+        const context = canvas.getContext('2d');
+    
+    context.beginPath();
+    
+    for (let angle = 0; angle <= Math.PI * 2; angle += 0.01) {
+      const x = 16 * Math.pow(Math.sin(angle), 3);
+      const y = -1 * (
+        13 * Math.cos(angle) -
+        5 * Math.cos(2 * angle) -
+        2 * Math.cos(3 * angle) -
+        Math.cos(4 * angle)
+      );
+    
+      context.lineTo(x + canvas.width / 2, y + canvas.height / 2);
+    }
+    
+    context.fillStyle = 'red';
+    context.fill();
+</script>
+</body>
+</html>
