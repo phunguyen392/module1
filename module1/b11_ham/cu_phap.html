@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+<<<<<<< HEAD
     <!-- <script>
        function tinhTong(a, b) {
   var tong = a + b;
@@ -37,5 +38,38 @@ console.log(tinhTong);
         sum += i
         console.log(sum);
     </script> -->
+=======
+    <!-- <p onclick="welcom()">click vao day</p>
+    <script>
+        function welcom(){
+            alert("xin chao")
+        }
+
+        function sum(a,b){
+            return a + b;
+
+        }
+        var tong = sum(2,3)
+        document.write("tong la " + tong)
+
+</script> -->
+
+<!-- tinh binh phuong  -->
+        binh phuong cua <input type="text" id="input" oninput="maytinh()">
+        <!-- <input id="kq"> -->
+      la  <span id="kq"></span>
+        <script>
+            function binhphuong(so){
+var kq = so * so
+return kq;
+            }
+            function maytinh(){
+                var input = document.getElementById("input").value
+                var kq = binhphuong(input)
+                document.getElementById("kq").innerHTML=kq
+        
+            }
+        </script>
+>>>>>>> 6bd768a12a53b5ad716b3c75d529dac08c7f30e9
 </body>
 </html>

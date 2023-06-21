@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>chuyen doi nhiet do</p>
+<input type="number" id="ip" oninput="op(this.value)" onchange="op(this.value)">  doC
+<p id="dm"></p>
+<span id="kq" ></span>
+<script>
+    function op(nd){
+nd = parseInt(nd)
+        document.getElementById("kq").innerHTML =" la: " + (nd-32) / 1.8 + "F"
+    }
+</script>
+</body>
+</html>

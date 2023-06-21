@@ -61,17 +61,18 @@
 
 
 
-var a = [1,2,3]
-var v = Number(prompt('nhap v')) 
+// var a = [1,2,3]
+// var v = Number(prompt('nhap v')) 
 
-// cach 1
-var vi_tri = a.indexOf(v)
-if(vi_tri >- 1){
-    a.splice(vi_tri,1)
-}
-console.log(a);
+// // cach 1
+// var vi_tri = a.indexOf(v)
+// if(vi_tri >- 1){
+//     a.splice(vi_tri,1)
+// }
+// console.log(a);
 
-//ccach 2
+
+//cach 2
 // var tim = false
 // var vi_tri = -1
 // for(var i=0; i < a.length; i++){
@@ -104,6 +105,26 @@ console.log(a);
 // else{
 //     document.write("k thuoc" + v)
 // }
+
+
+
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Nhập giá trị V từ người dùng
+let V = prompt("Nhập giá trị V");
+
+// Kiểm tra xem V có thuộc mảng đã cho không
+if (arr.includes(parseInt(V))) {
+  // Nếu V thuộc mảng đã cho, xoá V khỏi mảng
+  arr.splice(arr.indexOf(parseInt(V)), 1);
+  arr.push(0); // gán 0 cho phần tử cuối cùng của mảng
+
+  // In ra mảng sau khi xoá V
+  document.write(arr);
+} else {
+ document.write( V + " không thuộc mảng đã cho");
+ 
+}
 </script>
 
 </body>
