@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        function sum(a, b) {
+            return a + b
+        }
+        var total = sum(5, 7)
+        console.log(total);
+    </script> -->
+
+
+
+
+    <script>
+        function cong(a, b) {
+            return a + b
+        }
+        function tru(a, b) {
+            return a - b
+        }
+        function nhan(a, b) {
+            return a * b
+        }
+        function chia(a, b) {
+            return a / b
+        }
+
+
+        var soA = parseInt(prompt('nhap soA'))
+        var soB = parseInt(prompt('nhap soB'))
+        var kq = 0
+        var phep_tinh = prompt('nhap phep tinh')
+
+        switch (phep_tinh) {
+            case "+":
+                kq = cong(soA, soB)
+                break;
+            case "-":
+                kq = tru(soA, soB)
+                break;
+            case "*":
+                kq = nhan(soA, soB)
+                break;
+            case "/":
+                kq = chia(soA , soB)
+            default:
+                break;
+        }
+alert(kq)
+    </script>
+</body>
+
+</html>
