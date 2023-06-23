@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let person = {
+            name: ['bob', 'smith'],
+            age: 32,
+            gender: 'male',
+            interests: ['music','skiing'],
+            bio: function(){
+                alert(this.name[0]+ ''+ this.name[1]+'is'+this.age+'years old.he like'+this.interests[0]+'and'+this.interests[1]+'.')
+            },
+
+        }
+    </script> -->
+
+    <script>
+        function kiemTraKyTu(mangKyTu, kyTu) {
+var dem = 0;
+for (var i = 0; i < mangKyTu.length; i++) {
+if (mangKyTu[i] === kyTu) {
+dem++;
+}
+}
+if (dem > 0) {
+return dem;
+} else {
+return -1;
+}
+}
+
+
+//Ví dụ sử dụng hàm:
+
+
+var mangKyTu = ['a', 'b', 'c', 'd', 'e'];
+var kyTu = 'a';
+var ketQua = kiemTraKyTu(mangKyTu, kyTu);
+console.log(ketQua); // kết quả sẽ là 1, vì ký tự 'a' xuất hiện 1 lần trong mảng
+
+
+var mangKyTu2 = ['x', 'y', 'z'];
+var kyTu2 = 'a';
+var ketQua2 = kiemTraKyTu(mangKyTu2, kyTu2);
+console.log(ketQua2); // kết quả sẽ là -1, vì ký tự 'a' không xuất hiện trong mảng
+    </script>
+</body>
+</html>

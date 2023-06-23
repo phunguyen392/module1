@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let HCN = function(){
+            this.cd = 0;
+            this.cr = 0;
+            this.cv = function(){
+                let kq = (this.cd+ this.cr)*2
+                return kq
+            };
+            this.dt = function(){
+                let kq = (this.cd*this.cr)
+                return kq
+            }    
+        }
+        let hinhCN = new HCN()
+        hinhCN.cd = 20 
+        hinhCN.cr = 10
+        let cv = hinhCN.cv()
+       console.log(cv);
+       let s = hinhCN.dt()
+        console.log(s);
+    </script>
+</body>
+</html>

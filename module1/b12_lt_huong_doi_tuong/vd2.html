@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let phu = {
+            ten: 'phu',
+            tuoi: 32,
+            gioi_tinh: 'nam',
+            hoc: function (mon_hoc) {
+                console.log('toi dang hoc lap trinh huong doi tuong trong ' + mon_hoc);
+            },
+            tam_su: function () {
+                console.log('troi nong nen hay di an che');
+            },
+            giao_luu: function () {
+                console.log('uong sinh to lua mach cung ban be');
+            },
+            gioi_thieu: function () {
+                console.log('xin chao cac ban: ');
+                console.log('toi ten la: ' + this.ten);
+                console.log('nam nay mieng: ' + this.tuoi + 'tuoi');
+                console.log('mieng la:' + this.gioi_tinh);
+                console.log('toi co nhung hoat dong sau: ');
+                this.hoc("js")
+                this.tam_su()
+                this.giao_luu()
+            },
+        }
+
+        console.log(phu);
+        console.log(phu.ten);
+        console.log(phu.tuoi);
+        console.log(phu.gioi_tinh);
+        phu.hoc('js')
+        phu.tam_su()
+        phu.giao_luu()
+        phu.gioi_thieu()
+
+    </script>
+</body>
+
+</html>

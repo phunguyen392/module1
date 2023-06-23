@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Human = function () {
+            //thuoc tinh
+            this.ten = '';
+            this.tuoi = 0;
+            //phuong thuc
+            this.hoc = function (mon_hoc) {
+                console.log(this.ten + ' dang hoc ' + mon_hoc);
+            }
+            this.giai_tri = function (game) {
+                console.log(this.ten + ' dang giai tri ');
+            }
+        }
+        //sinh ra 3 doi tuong
+        let phu = new Human()
+        phu.ten = 'phu'
+        phu.tuoi = 32
+        phu.hoc('jav')
+        phu.giai_tri()
+       
+       
+       
+       
+       
+       
+        let vu = new Human()
+        vu.ten = 'vu'
+        vu.tuoi = 31
+        vu.hoc('lap trinh')
+        vu.giai_tri('fifa4')
+        let lam = new Human()
+        lam.ten = 'lam'
+        lam.tuoi = 30
+        lam.hoc('js')
+        lam.giai_tri('fay buc')
+
+
+
+        // console.log(phu);
+        // console.log(vu);
+        // console.log(lam);
+    </script>
+</body>
+
+</html>
