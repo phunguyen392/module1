@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+          let HinhTron = function (ts_bk) {
+            this.ban_kinh = ts_bk
+            this.setBan_kinh = function(ts_bk1){
+                this.ban_kinh = ts_bk1
+            }
+            this.getBan_kinh = function () {
+                return this.ban_kinh;
+            }
+            this.getS = function () {
+                return Math.PI * this.ban_kinh * this.ban_kinh;
+            }
+        }
+        let hinhtron1 = new HinhTron(6)
+        // hinhtron1.setBan_kinh(5)
+        let ban_kinh = hinhtron1.getBan_kinh()
+        let S = hinhtron1.getS()
+        alert(S)
+    </script>
+
+
+<script>
+    let Hinhtron = function(ts_bk){
+        this.ban_kinh = ts_bk
+        this.setBan_kinh = function(ts_bk1){
+            this.ban_kinh = ts_bk1
+        }
+        this.getBan_kinh = function(){
+            return this.ban_kinh
+        }
+        this.setS = function(){
+            
+        }
+    }
+    
+</script>
+</body>
+
+</html>
