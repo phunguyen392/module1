@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bouncing Ball Game</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="canvas" width="1000" height="500"></canvas>
+
+  <script>
+    // Lấy tham chiếu đến canvas và context
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    // Khởi tạo biến
+    let x = canvas.width / 2;
+    let y = canvas.height - 30;
+    let dx = 2;
+    let dy = -2;
+    let ballRadius = 20;
+    let paddleHeight = 10;
+    let paddleWidth = 400;
+    let paddleX = (canvas.width - paddleWidth) / 2;
+    let rightPressed = false;
+    let leftPressed = false;
+
+    // Thêm bộ lắng nghe sự kiện cho phím nhấn xuống và nhả ra
+    document.addEventListener("keydown", keyDownHandler, false);
+    document.addEventListener("keyup", keyUpHandler, false);
+
+    // Xử lý sự kiện khi phím được nhấn xuống
+    function keyDownHandler(e) {
+      if (e.keyCode == 39) {
+        rightPressed = true;
+      } else if (e.keyCode == 37) {
+        leftPressed = true;
+      }
+    }
+
+    // Xử lý sự kiện khi phím được nhả ra
+    function keyUpHandler(e) {
+      if (e.keyCode == 39) {
+        rightPressed = false;
+      } else if (e.keyCode == 37) {
+        leftPressed = false;
+      }
+    }
+
+    // Vẽ quả bóng
+    function drawBall() {
+      ctx.beginPath();
+      ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+      ctx.fillStyle = "red";
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    // Vẽ thanh đỡ
+    function drawPaddle() {
+      ctx.beginPath();
+      ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      ctx.closePath();
+    }
+
+    // Xóa quả bóng và thanh đỡ
+    function clearCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    // Di chuyển quả bóng
+    function moveBall() {
+      // Nếu quả bóng chạm biên trên hoặc dưới của canvas
+      if (y + dy < ballRadius || y + dy > canvas.height - ballRadius) {
+        dy = -dy;
+      }
+      // Nếu quả bóng chạm biên trái hoặc phải của canvas
+      if (x + dx < ballRadius || x + dx > canvas.width - ballRadius) {
+        dx = -dx;
+      }
+      // Nếu quả bóng chạm thanh đỡ
+      if (y + dy > canvas.height - ballRadius - paddleHeight && x > paddleX && x < paddleX + paddleWidth) {
+        dy = -dy;
+      }
+      // Cập nhật vị trí của quả bóng
+      x += dx;
+      y += dy;
+    }
+
+    // Di chuyển thanh đỡ
+    function movePaddle() {
+      if (rightPressed && paddleX < canvas.width - paddleWidth) {
+        paddleX += 7;
+      } else if (leftPressed && paddleX > 0) {
+        paddleX -= 7;
+      }
+    }
+
+    // Vẽ tất cả các thành phần trò chơi
+    function draw() {
+      clearCanvas();
+      drawBall();
+      drawPaddle();
+      moveBall();
+      movePaddle();
+    }
+
+    // Thực hiện vòng lặp để vẽ quả bóng
+    setInterval(draw, 10);
+  </script>
+</body>
+</html>
