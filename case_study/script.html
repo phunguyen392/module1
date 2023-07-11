@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const itemList = ["Bánh kẹo", "Thuốc lá", "Nước giải khát"];
+
+function displayItemList() {
+  const ul = document.querySelector("ul");
+  ul.innerHTML = "";
+  itemList.forEach((item) => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    ul.appendChild(li);
+  });
+}
+
+function addItem(item) {
+  itemList.push(item);
+  displayItemList();
+}
+
+function editItem(oldItem, newItem) {
+  const index = itemList.indexOf(oldItem);
+  if (index !== -1) {
+    itemList[index] = newItem;
+    displayItemList();
+  }
+}
+
+function deleteItem(item) {
+  const index = itemList.indexOf(item);
+  if (index !== -1) {
+    itemList.splice(index, 1);
+    displayItemList();
+  }
+}
+
+const addItemForm = document.querySelector('form:nth-of-type(1)');
+addItemForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const newItem = document.querySelector("#new-item").value;
+  addItem(newItem);
+});
+
+const editItemForm = document.querySelector('form:nth-of-type(2)');
+editItemForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const oldItem = document.querySelector("#edit-item").value;
+  const newItem = prompt("Nhập tên mới:");
+  editItem(oldItem, newItem);
+});
+
+const deleteItemForm = document.querySelector('form:nth-of-type(3)');
+deleteItemForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const item = document.querySelector("#delete-item").value;
+  deleteItem(item);
+});
+
+displayItemList();
+    </script>
+</body>
+</html>

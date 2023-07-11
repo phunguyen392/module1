@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        // var arr = [1,2,3,4,5,]
+        // for(var i =0;i < arr.length; i++){
+        //     document.write(arr[i] + "<br>")
+        // }
+        
+
+    //   var cuoc_hen = ["hen", "don"]
+    //   cuoc_hen.push("len")
+    //   cuoc_hen.splice(1,1,"lai")
+    //   cuoc_hen.unshift("den")
+    //   document.write(cuoc_hen)
+
+
+
+    var numbers = [5, 1, 3, 2, 10];
+var min1 = [];
+var min2 = [];
+for (var i = 0; i < numbers.length; i++) {
+  if (numbers[i] < min1) {
+    min2 = min1;
+    min1 = numbers[i];
+  } else if (numbers[i] < min2) {
+    min2 = numbers[i];
+  }
+}
+console.log(min2); // 3
+
+
+</script>
+</body>
+</html>
