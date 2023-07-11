@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+      
+          var  n = prompt("Nhập số, cách, nhập số ....", )
+          console.log(n);
+          var  so_nguyen = n.split(" ")
+          var  soAm = []
+          var  soDuong = []
+    
+          for (let i = 0; i < so_nguyen.length; i++) {
+            if (so_nguyen[i] < 0) {
+              soAm.push(so_nguyen[i])
+            }
+            if (so_nguyen[i] > 0) {
+              soDuong.push(so_nguyen[i])
+            }
+          }
+    
+          if (soAm.length > 0) {
+            console.log("Dãy số âm là: " + soAm  + "<br>")
+          } else {
+            console.log('Số âm: không có ' + "<br>")
+          }
+    
+          if (soDuong.length > 0) {
+            console.log("Dãy số dương là: "+soDuong)
+          } else {
+            console.log('Số dương: không có')
+          }
+       
+      </script>
+</body>
+</html>
