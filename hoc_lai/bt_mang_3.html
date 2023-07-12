@@ -2,52 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <!-- <script>
-    
-       for(var i = 1; i <= 6; i++){
-        for(var j = 1; j < i; j++){
-            
-            if( i == 1 || i == 6 || j == 1 || j == 6 ){
-                document.write("*");
-            } 
-            else{
-                
-                document.write(" &nbsp &nbsp ");
-            }
-
-        }
-        document.write("<br>")
-    }
-    </script> -->
-
-
-
-
     <script>
-        var h, c;
-        var count ;
-        count = 5 ;   
-    for(var h=1; h<=5 ; h++){
-        for (c=1; c <= 5; c++){
-            if (c < count){
-            document.write("&nbsp;&nbsp;&nbsp")}
-        
-        else {
-
-            document.write("  *  ")
+        var n = prompt("nhap so, cach, nhap so")
+        var so_nguyen = n.split(" ")
+        var soAm = []
+        var soDuong = []
+        for (so_nguyen[i] = 0; i < so_nguyen.length;i++){
+            if(i < 0){
+                soAm.push(so_nguyen[i])
+                document.write(soAm)    
+            }
+            else {
+                document.write("khong co so")
+            }
+            if(so_nguyen[i] > 0){
+                soDuong.push(soDuong[i])
+                document.write(soDuong)
+            }
+            else{
+                document.write("khong co so")
+            }
         }
-    }
-    count--
-    document.write("<br>")
-}
-
-
-
-
-</script>
+    </script>
 </body>
 </html>

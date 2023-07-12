@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        var mang = [-1,2,-45,7,-9,9]
+       function dao_nguoc(mang){
+        var tam = mang[1]
+        mang[1] = mang[mang.length-1]
+        mang[mang.length-1] = tam
+        return mang
+       }
+       document.write(dao_nguoc(mang))
+    </script> -->
+
+
+<script>
+    var mang = [4,5,-1,77,32,23,22,22,0,-2]
+    function tim_min2(mang){
+        var min = mang[0]
+        var min2 = 0
+        
+        for(var i = 1; i < mang.length; i++){
+          if(mang[i] < min){
+            min2 = min; 
+            min = mang[i];
+            console.log(min2);
+          } else if(mang[i] < min2 && mang[i] !== min){
+            min2 = mang[i];
+          }
+        }
+      
+        return min2;
+      }
+      var min2 = tim_min2(mang);
+      document.write(min2);
+    </script>
+
+
+<!-- 
+<script>
+
+function tim_gia_tri_nho_nhat(mang) {
+    var min = mang[0];
+    var min2 = 0
+  
+    for (var i = 1; i < mang.length; i++) {
+      if (mang[i] < min) {
+        min = mang[i];
+      }
+    }
+  
+    return min;
+  }
+  
+  var mang = [5, 2, 8, 1, 9];
+  var gia_tri_nho_nhat = tim_gia_tri_nho_nhat(mang);
+  
+  console.log(gia_tri_nho_nhat); // 1
+</script> -->
+
+
+
+
+
+
+
+</body>
+</html>
