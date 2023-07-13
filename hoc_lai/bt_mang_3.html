@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <script>
+<<<<<<< HEAD
         var a = [12,32,43,-1,-4,-54,3]
         var min = a[0]
         var min1 = 0
@@ -21,6 +23,28 @@
         
         document.write(min + "<br>")
         document.write(max1)
+=======
+        var n = prompt("nhap so, cach, nhap so")
+        var so_nguyen = n.split(" ")
+        var soAm = []
+        var soDuong = []
+        for (so_nguyen[i] = 0; i < so_nguyen.length;i++){
+            if(i < 0){
+                soAm.push(so_nguyen[i])
+                document.write(soAm)    
+            }
+            else {
+                document.write("khong co so")
+            }
+            if(so_nguyen[i] > 0){
+                soDuong.push(soDuong[i])
+                document.write(soDuong)
+            }
+            else{
+                document.write("khong co so")
+            }
+        }
+>>>>>>> eca6f4d63e1686f46eccb9ee09775118617f45d3
     </script>
 </body>
 </html>
