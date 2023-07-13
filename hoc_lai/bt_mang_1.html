@@ -14,11 +14,13 @@
 
     var cuoc_hen = ["lại", "đón"]
     cuoc_hen.push("đến")
+
     cuoc_hen.splice(1, 1, "hẹn")
+    
     cuoc_hen.unshift("lên")
 
 
-    document.write(cuoc_hen);
+    // document.write(cuoc_hen);
 
 
 
@@ -35,20 +37,20 @@
 
 
 
-    // var dau_mang = 0;
-    // var cuoi_mang = cuoc_hen.length - 1;
-    // while (dau_mang < cuoi_mang) {
+    var dau_mang = 0;
+    var cuoi_mang = cuoc_hen.length - 1;
+    while (dau_mang < cuoi_mang) {
 
-    //   var b = cuoc_hen[dau_mang];
-    //   cuoc_hen[dau_mang] = cuoc_hen[cuoi_mang];                    //vd2 dao nguoc mang
-    //   cuoc_hen[cuoi_mang] = b;
-    //   dau_mang++;
-    //   cuoi_mang--;
-    //  }
-
+      var tam = cuoc_hen[dau_mang];
+      cuoc_hen[dau_mang] = cuoc_hen[cuoi_mang];                    //vd2 dao nguoc mang
+      cuoc_hen[cuoi_mang] = tam;
+      dau_mang++;
+      cuoi_mang--;
+     }
+// [den, hen, lai, len]
     // cuoc_hen.reverse()
 
-    // document.write(cuoc_hen);
+    document.write(cuoc_hen);
 
 
 

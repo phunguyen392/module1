@@ -10,30 +10,29 @@
        
       
           var  n = prompt("Nhập số, cách, nhập số ....", )
-          console.log(n);
-          var  so_nguyen = n.split(" ")
+          var  so_tu_nhien = n.split(" ")
           var  soAm = []
           var  soDuong = []
     
-          for (let i = 0; i < so_nguyen.length; i++) {
-            if (so_nguyen[i] < 0) {
-              soAm.push(so_nguyen[i])
+          for (var i = 0; i < so_tu_nhien.length; i++) {
+            if (so_tu_nhien[i] < 0) {
+              soAm.push(so_tu_nhien[i])
             }
-            if (so_nguyen[i] > 0) {
-              soDuong.push(so_nguyen[i])
+            if (so_tu_nhien[i] > 0) {
+              soDuong.push(so_tu_nhien[i])
             }
           }
     
           if (soAm.length > 0) {
-            console.log("Dãy số âm là: " + soAm  + "<br>")
+           document.write("Dãy số âm là: " + soAm  + "<br>")
           } else {
-            console.log('Số âm: không có ' + "<br>")
+           document.write("Số âm: không có " + "<br>")
           }
     
           if (soDuong.length > 0) {
-            console.log("Dãy số dương là: "+soDuong)
+           document.write("Dãy số dương là: "+soDuong)
           } else {
-            console.log('Số dương: không có')
+           document.write("Số dương: không có")
           }
        
       </script>
